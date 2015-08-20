@@ -1,9 +1,9 @@
 @charset "utf-8";
 
 /*
-Theme Name:大聖寺スマホ
-Theme URI:http://seiko-ob.org
-Description:大聖寺高校同窓会スマートフォン
+Theme Name:base sp
+Theme URI:
+Description:
 Author:
 Author URI:
 Version:
@@ -19,7 +19,7 @@ html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
+small, strike, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
@@ -57,21 +57,20 @@ img { -ms-interpolation-mode:bicubic;vertical-align: middle; }
 ---------------------------------------------------------- */
 
 body{
-	font-size: 14px;
+	font-size: 12px;
 	font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ","Meiryo",arial,Osaka,"ＭＳ Ｐゴシック","MS PGothic",Sans-Serif;
 	color: #333;
-	background-color: #F7F3FC;
-	text-wrap:unrestricted;
 }
 
-/* decoration
------------------------------------------------- */
-
 /* text */
-a{color:#000000;text-decoration:none;}
-a:hover{color:#666666;}
+strong.marker.yellow {
+	background: linear-gradient(transparent 40%, #ff9 40%); 
+}
+
+/* link */
+a{color:#960A00;text-decoration:none;}
+a:hover{color:#b21818;}
 a:active, a:focus {outline: 0;}
-a.link{color: #671cb4;font-weight: bold;}
 
 .gosic{font-family :'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;}
 .serif{font-family:"ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho",  serif;}
@@ -84,70 +83,19 @@ a.link{color: #671cb4;font-weight: bold;}
 .clearfix {width:100%;}
 .clearfix:after{content: ""; display: block; clear: both;}
 
-
-/*-----------------------------------------------------------
-
-	stracture
-		
----------------------------------------------------------- */
-
-header{
-	width: 100%;
-	margin: 0 auto;
-	padding: 15px 0 0;
-	background-color: #701CAB;
-	
-	h1{
-		width: 250px;
-		height: 34px;
-		background-image: url(img/header/logo.png);
-		background-repeat: no-repeat;
-		background-size:contain;
-		text-indent: -8900px;
-		margin: 0 auto 15px;
-		a{display: block;
-			width: 100%;
-			height: 100%;
-		}
-	}
-	
-}
-
-nav{
-	
-	ul{
-	li{
-		width: 49.9%;
-		float: left;
-		border-right: 1px solid #933ad1;
-		border-top: 1px solid #933ad1;
-		&:nth-child(even){border-right: none;}
-		a{
-			color: #FFFFFF;
-			font-size: 14px;
-			padding: 8px 0;
-			font-weight: bold;
-			text-align: center;
-			display: block;
-			width: 100%;
-			height: 100%;
-			font-family:"ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho",  serif;
-		}
-	}
-	}
-}
-
-#contents{
-	width: 90%;
-	margin: 0 auto;
-}
-
-
-footer{
-	width: 100%;
-	margin-top: 50px;
-	background-color: #701CAB;
-}
+/* adjust */
+.mb10{margin-bottom: 10px!important;}
+.mb15{margin-bottom: 15px!important;}
+.mb20{margin-bottom: 20px!important;}
+.mb25{margin-bottom: 25px!important;}
+.mb30{margin-bottom: 30px!important;}
+.mb40{margin-bottom: 40px!important;}
+.mb50{margin-bottom: 50px!important;}
+.mb80{margin-bottom: 80px!important;}
+.ml10{margin-left: 10px!important;}
+.ml15{margin-left: 15px!important;}
+.mt50{margin-top: 50px!important;}
+.mt60{margin-top: 60px!important;}
 
 /*-----------------------------------------------------------
 
@@ -155,7 +103,10 @@ footer{
 		
 ---------------------------------------------------------- */
 
-
+#header{
+	width: 90%;
+	margin:0 auto;
+}
 
 
 /*-----------------------------------------------------------
@@ -164,325 +115,22 @@ footer{
 		
 ---------------------------------------------------------- */
 
-.section{
-	background-color: #FFFFFF;
-	margin: 15px 0;
-	border-bottom: 1px solid #ede6f7;
-	
-	.section-title{
-		font-size: 16px;
-		padding: 10px 15px;
-		border-bottom: 1px solid #F1F1F1;
-		font-family:"ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho",  serif;
-	}
-	
-	.inner{
-		padding: 15px;
-	}
-}
-
-.btn-more{
-	display: block;
-	margin: 15px 0;
-	height: 40px;
-	line-height: 40px;
-	text-align: center;
-	border-radius: 4px;
-	color: #FFFFFF;
-	font-weight: bold;
-	text-shadow: 1px 1px 0 #666666;
-	background: #ffd65e; /* Old browsers */
-background: -moz-linear-gradient(top,  #ffd65e 0%, #febf04 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffd65e), color-stop(100%,#febf04)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  #ffd65e 0%,#febf04 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  #ffd65e 0%,#febf04 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  #ffd65e 0%,#febf04 100%); /* IE10+ */
-background: linear-gradient(to bottom,  #ffd65e 0%,#febf04 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd65e', endColorstr='#febf04',GradientType=0 ); /* IE6-9 */
-border-bottom: 1px solid #ecb103;
-
-}
 
 /* top
 -------------------------------------- */
 
-#news-list{
-	
-	li{
-		padding: 6px 10px;
-		&:nth-child(odd){background-color: #f9f9f9;}
-		time{
-			font-size: 12px;
-		}
-		span{position: relative;top:-1px;}
-		.cat-news{
-			background-color: #c0f059;
-			color: #FFFFFF;
-			font-size: 10px;
-			padding: 1px 3px;
-			display: inline-block;
-			width: 80px;
-			text-align: center;
-		}
-		.cat-important{
-			background-color: #dc0d2f;
-			color: #FFFFFF;
-			font-size: 10px;
-			padding: 1px 3px;
-			display: inline-block;
-			width: 80px;
-			text-align: center;
-		}
-		.cat-association{
-			background-color: #671cb4;
-			color: #FFFFFF;
-			font-size: 10px;
-			padding: 1px 3px;
-			display: inline-block;
-			width: 80px;
-			text-align: center;
-		}
-		p{margin-top: 4px;font-size: 14px;}
-	}
-	
-}
 
-#activity-list{
-	li{
-		margin-bottom: 15px;
-		padding-bottom: 15px;
-		border-bottom: 1px solid #eeeeee;
-		img{width: 100%;height: auto;}
-		.title{
-			font-weight: bold;
-			margin: 10px 0;
-		}
-	}
-}
-
-#bnr-list{
-	li{
-		margin-bottom: 15px;
-		&:last-child{margin-bottom: 0;}
-		img{
-			width: 100%;
-			height: auto;
-			border: 1px solid #eeeeee;
-		}
-	}
-}
 
 
 /* single.php
 -------------------------------------- */
 
-.single{
 
-	p{
-		word-break: break-all;
-		margin-bottom: 20px;
-		}
-
-	img{
-		width: 100%;
-		height: auto;
-		padding-bottom: 20px;
-	}
-	iframe{
-		width: 100%;
-		height: auto;
-	}
-}
-
-#news-pagenavi{
-	margin-top: 20px;
-	position: relative;
-	
-	.nextpost{
-		background-color: #FFFFFF;
-		display: block;
-		text-align: right;
-		padding: 10px 30px 10px 10px;
-		background-image: url(img/common/btn-next.png);
-		background-position: right 10px center;
-		background-repeat: no-repeat;
-		border-bottom: 1px solid #EDE6F7;
-		.next{color: #701CAB;}
-		.title{color: #000000;}
-		&:hover{
-			opacity:0.4;
-			filter:alpha(opacity=40);
-			-ms-filter: "alpha( opacity=40 )";
-		}
-	}
-	
-	.prevpost{
-		display: block;
-		background-color: #FFFFFF;
-		padding: 10px 10px 10px 30px;
-		background-image: url(img/common/btn-prev.png);
-		background-position: left 10px center;
-		background-repeat: no-repeat;
-		border-bottom: 1px solid #EDE6F7;
-		.prev{color: #701CAB;}
-		.title{color: #000000;}
-		&:hover{
-			opacity:0.4;
-			filter:alpha(opacity=40);
-			-ms-filter: "alpha( opacity=40 )";
-		}
-	}
-	
-	.saishin{
-		height: 38px;
-		background-color: #FFFFFF;
-		border-bottom: 1px solid #EDE6F7;
-		line-height: 38px;
-		text-align: right;
-		padding: 10px;
-		opacity:0.4;
-		filter:alpha(opacity=40);
-		-ms-filter: "alpha( opacity=40 )";
-	}
-	
-	.saigo{
-		height: 38px;
-		background-color: #FFFFFF;
-		border-bottom: 1px solid #EDE6F7;
-		line-height: 38px;
-		padding: 10px;
-		opacity:0.4;
-		filter:alpha(opacity=40);
-		-ms-filter: "alpha( opacity=40 )";
-	}
-}
 
 /* page.php
 -------------------------------------- */
 
-#breadcrumb{
 
-	margin: 15px 0;
-
-	ul li{
-		display: inline-block;
-		margin-right: 15px;
-	}
-}
-
-.about-section{
-	margin-bottom: 30px;
-	p{
-		margin:15px 0;
-	}
-}
-
-.page{
-	a{
-		color: #7D38AF;
-	}
-	p{
-		margin: 15px 0;
-	}
-}
-
-/* pager */
-
-.pager{
-	
-	height: 40px;
-	text-align: center;
-	margin-top: 30px;
-	
-	.page-numbers{
-		padding: 6px 10px;
-		border: 1px solid #671CB4;
-		color: #574018;
-		background-color: #FFFFFF;
-		font-weight: bold;
-		&.current{
-			background-color: #671CB4;
-			color: #FFFFFF;
-		}
-		&:hover{
-			background-color: #671CB4;
-			color: #FFFFFF;
-		}
-	}
-}
-
-/* about */
-
-.about-section{
-	
-	h2{
-		background-color: #701CAB;
-		padding: 2px 8px;
-		border-radius: 2px;
-		margin-bottom: 20px;
-		color: #FFFFFF;
-	}
-	
-	img{
-		width: 100%;
-		height: auto;
-	}
-	
-	a{
-		color: #701CAB;
-	}
-	
-	.address{
-		margin-bottom: 15px;
-		border-bottom: 1px dotted #dddddd;
-		word-break: break-all;
-	}
-	
-	.yakuin-list{
-		font-size: 10px;
-		text-align: center;
-		th{
-			background-color: #eeeeee;
-			padding: 2px;
-		}
-		tr{
-			border-bottom: 1px dotted #dddddd;
-		}
-		td{
-			padding: 2px;
-		}
-	}
-	
-}
-
-/* seiryu */
-
-.seiryu-table{
-
-	tr{
-		border-top: 1px solid #eeeeee;
-		border-bottom: 1px solid #eeeeee;
-	}
-
-	th{
-		width: 50px;
-		background-color: #F9F9F9;
-		padding: 8px;
-		font-size: 12px;
-	}
-	td{
-		padding: 8px;
-	}
-	.pdf{
-		background-image: url(img/contents/seiryuu/pdf.png);
-		background-repeat: no-repeat;
-		background-position: right center;
-		padding-right: 15px;
-	}
-}
-
-/* main
--------------------------------------- */
 
 
 
@@ -492,15 +140,7 @@ border-bottom: 1px solid #ecb103;
 		
 ---------------------------------------------------------- */
 
-#side{
-	
-	#recently-post{
-		li{
-			margin-bottom: 15px;
-		}
-	}
-	
-}
+
 
 /*-----------------------------------------------------------
 
@@ -508,25 +148,6 @@ border-bottom: 1px solid #ecb103;
 		
 ---------------------------------------------------------- */
 
-footer{
-	
-	#inner{
-		width: 90%;
-		margin: 0 auto;
-		padding: 15px;
-		color: #FFFFFF;
-		
-		a{
-			color: #FFFFFF;
-			text-decoration: underline;
-		}
-		
-		#copyright{
-			font-size: 10px;
-			margin-top: 15px;
-			text-align: center;
-		}
-		
-	}
+#footer{
 	
 }
